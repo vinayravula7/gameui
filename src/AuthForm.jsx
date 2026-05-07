@@ -126,7 +126,7 @@ const AuthForm = ({ onLogin }) => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="vinnivinay241@gmail.com"
+                  placeholder="sv@gmail.com"
                   style={authStyles.input}
                   onChange={handleChange}
                   required
