@@ -274,15 +274,19 @@ const AuthForm = ({ onLogin }) => {
 };
 
 const authStyles = {
-  container: {
+container: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "100vh",
+    // 100vh ki badulu 100dvh (Dynamic Viewport Height) use chey
+    height: "100dvh", 
+    width: "100vw",
     background: "linear-gradient(180deg, #050505 0%, #1a4d2e 100%)",
-    padding: "20px 15px",
+    padding: "15px", // Padding koncham thagginchu mobile kosam
     fontFamily: "'Inter', sans-serif",
-  },
+    overflow: "hidden", // Emi bayataki vellakunda control chesthundhi
+    boxSizing: "border-box", // Padding valla height badagakunda chusthundhi
+},
   contentWrapper: {
     width: "100%",
     maxWidth: "400px",
