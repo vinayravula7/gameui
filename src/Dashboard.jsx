@@ -15,24 +15,15 @@ const Dashboard = () => {
 };
 
 const styles = {
-container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    /* 1. Use dynamic viewport height to avoid mobile address bar issues */
-    height: "100dvh", 
-    width: "100vw",
-    
-    /* 2. Critical: padding valla height penchakunda box-sizing set cheyali */
-    boxSizing: "border-box",
-    
-    background: "linear-gradient(135deg, #000000 0%, #1a4d2e 100%)",
-    padding: "20px",
-    fontFamily: "'Inter', sans-serif",
-    
-    /* 3. Prevent any accidental content overflow */
-    overflow: "hidden",
-},
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    background: "linear-gradient(135deg, #000000 0%, #1a4d2e 100%)",
+    padding: "20px",
+    fontFamily: "'Inter', sans-serif",
+  },
   contentWrapper: {
     width: "100%",
     maxWidth: "500px",
