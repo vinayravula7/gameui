@@ -45,14 +45,14 @@ const dashStyles = {
     height: "100dvh",
     width: "100vw",
     background: "linear-gradient(180deg, #050505 0%, #1a4d2e 100%)",
-    padding: "20px", // Laptop lo margins baguntayi
+    padding: "20px",
     fontFamily: "'Inter', sans-serif",
     boxSizing: "border-box",
     overflow: "hidden",
   },
   contentWrapper: {
     width: "100%",
-    maxWidth: "450px", // Laptop lo card width ni koncham pencha
+    maxWidth: "450px", 
     display: "flex",
     flexDirection: "column",
     gap: "12px",
@@ -73,8 +73,7 @@ const dashStyles = {
     boxShadow: "0 20px 50px rgba(0,0,0,0.6)",
     overflowY: "auto",
     width: "100%",
-    // Scrollbar ni hide chesthundhi cleanliness kosam
-    scrollbarWidth: "none", 
+    scrollbarWidth: "none",
     msOverflowStyle: "none",
   },
   footerAction: { 
