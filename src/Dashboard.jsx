@@ -13,8 +13,6 @@ const Dashboard = () => {
     </div>
   );
 };
-
-const styles = {
 const styles = {
   container: {
     display: "flex",
