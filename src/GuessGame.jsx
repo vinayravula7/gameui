@@ -194,13 +194,14 @@ const Dashboard = () => {
 
         <main style={dashStyles.mainCard}>
           <GuessGame />
-        </main>
 
-        <div style={dashStyles.footerAction}>
-          <button onClick={handleLogout} style={dashStyles.logoutBtn}>
-            <LogOut size={18} /> LOG OUT
-          </button>
-        </div>
+          {/* Logout button moved inside the mainCard for consistency */}
+          <div style={dashStyles.footerAction}>
+            <button onClick={handleLogout} style={dashStyles.logoutBtn}>
+              <LogOut size={18} /> LOG OUT
+            </button>
+          </div>
+        </main>
 
         <div style={dashStyles.devFooter}>
           <p>© {new Date().getFullYear()} All Rights Reserved</p>
@@ -276,6 +277,7 @@ const gameStyles = {
     padding: "14px",
     fontWeight: "bold",
     fontSize: "14px",
+    cursor: "pointer",
   },
   guessBtnDisabled: {
     width: "100%",
@@ -330,6 +332,7 @@ const gameStyles = {
     justifyContent: "center",
     gap: "10px",
     marginTop: "5px",
+    cursor: "pointer",
   },
 };
 
@@ -337,12 +340,13 @@ const dashStyles = {
   container: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "flex-start",
-    maxHeight: "100vh",
+    alignItems: "flex-start", // Top alignment is better for scrolling
+    minHeight: "100vh", // Stretch background
     background: "linear-gradient(180deg, #050505 0%, #1a4d2e 100%)",
-    padding: "15px 15px",
+    padding: "20px 15px",
     fontFamily: "'Inter', sans-serif",
     boxSizing: "border-box",
+    overflowY: "auto", // Enable vertical scrolling
   },
   contentWrapper: {
     width: "100%",
@@ -350,6 +354,10 @@ const dashStyles = {
     display: "flex",
     flexDirection: "column",
     gap: "15px",
+    /* auto margins keep it centered when space allows, 
+       but allow top-alignment when space is tight (Laptop) */
+    marginTop: "auto",
+    marginBottom: "auto",
   },
   headerTitle: {
     color: "#fff",
@@ -363,10 +371,14 @@ const dashStyles = {
     backgroundColor: "#ffffff",
     borderRadius: "24px",
     boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
-    overflow: "hidden",
+    overflow: "hidden", // Ensures content stays within the rounded corners
     width: "100%",
   },
-  footerAction: { marginTop: "5px", width: "100%" },
+  footerAction: {
+    padding: "0 20px 20px", // Internal padding for logout button inside card
+    width: "100%",
+    boxSizing: "border-box",
+  },
   logoutBtn: {
     width: "100%",
     backgroundColor: "#1DB954",
@@ -380,14 +392,15 @@ const dashStyles = {
     alignItems: "center",
     justifyContent: "center",
     gap: "10px",
+    cursor: "pointer",
     boxShadow: "0 10px 20px rgba(29, 185, 84, 0.2)",
   },
   devFooter: {
-    // marginTop: "10px",
     fontSize: "11px",
     color: "rgba(255, 255, 255, 0.5)",
     textAlign: "center",
     lineHeight: "1.6",
+    padding: "10px 0",
   },
 };
 
